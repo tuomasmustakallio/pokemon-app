@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import MainPage from "./components/MainPage";
+import Details from "./components/Details";
 
 function App() {
+  const [showDetails, setShowDetails] = useState(false);
+  const [shownPokemon, setShowPokemon] = useState();
+
+  const handleShowDetails = () => {
+    setShowDetails(!showDetails);
+  };
+  const handleShownPokemon = (pokemon) => {
+    setShowPokemon(pokemon);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {showDetails ? (
+        <Details changePage={handleShowDetails} shownPokemon={shownPokemon} />
+      ) : (
+        <MainPage
+          changePage={handleShowDetails}
+          changeShownPokemon={handleShownPokemon}
+        />
+      )}
     </div>
   );
 }
