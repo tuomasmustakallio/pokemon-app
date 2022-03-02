@@ -1,6 +1,7 @@
-# Pokemon-app that displays 20 random pokemons from https://pokeapi.co/. You can view the skillset of each pokemon and search for them.
+# Pokemon-app 
+An app that displays 20 random pokemons from https://pokeapi.co/. You can view the skillset of each pokemon and search for them.
 
-[Demosite▶️ - Github Pages](https://tuomasmustakallio.github.io/pokemon-app/).
+[Demosite▶️ - Github Pages](https://tuomasmustakallio.github.io/pokemon-app/)
 
 ## Available Scripts
 
